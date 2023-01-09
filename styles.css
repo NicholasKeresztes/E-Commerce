@@ -6,6 +6,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 p {
     line-height: 1.5;
 }
@@ -130,6 +135,7 @@ h2 {
 
 .header__img--wrapper {
     padding: 24px;
+    z-index: 2;
 }
 
 .container {
@@ -145,6 +151,35 @@ h2 {
 
 
 /* HIGHLIGHTS */
+
+#highlights {
+    position: relative;
+    max-width: 100vw ;
+}
+
+#highlights:after,
+#highlights:before {
+    background: url(./assets/wave.svg);
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#highlights:after {
+    bottom: 1px;
+    transform: translateY(100%) rotate(180deg);
+}
+
+
+#highlights:before {
+    top: 1px;
+    transform: translateY(-100%);
+}
 
 .highlight__wrapper {
     display: flex;
@@ -174,10 +209,30 @@ h2 {
 
 .highlight__para {
     text-align: center;
-    max-width: 240px;
+    max-width: 280px;
 }
 
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+}
+
+/* FEATURES */
+
+#features {
+    height: 1000px;
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.books {
+    display: flex;
+}
+
+.book__img {
+    max-height: 380px;
 }
